@@ -22,10 +22,18 @@
                 <a href="/langganan">Langganan</a>
                 <a href="/program">Program</a>
             </div>
+            @if (Route::has('login'))
             <div class="auth-buttons">
-                <a href="../app/Login-Register.html" class="login-btn">Login</a>
-                <button class="register-btn">Register</button>
+                @auth
+                    <a href="{{ url('/dashboard') }}">Dashboard</a>
+                @else
+                    <a href="{{ route('login') }}" class="login-btn">Login</a>
+                @if (Route::has('register'))
+                    <a href="{{ route('register') }}" class="register-btn">Register</a>
+                @endif
+                @endauth
             </div>
+            @endif
         </nav>
     
         <!-- header -->

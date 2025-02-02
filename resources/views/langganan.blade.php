@@ -19,10 +19,18 @@
         <a href="/langganan">Langganan</a>
         <a href="/program">Program</a>
     </div>
-    <div class="auth-buttons">
-        <button class="login-btn">Login</button>
-        <button class="register-btn">Register</button>
-    </div>
+    @if (Route::has('login'))
+            <div class="auth-buttons">
+                @auth
+                    <a href="{{ url('/dashboard') }}">Dashboard</a>
+                @else
+                    <a href="{{ route('login') }}" class="login-btn">Login</a>
+                @if (Route::has('register'))
+                    <a href="{{ route('register') }}" class="register-btn">Register</a>
+                @endif
+                @endauth
+            </div>
+            @endif
 </nav>
 
 <!-- Your page content goes here -->
