@@ -22,7 +22,7 @@
     @if (Route::has('login'))
             <div class="auth-buttons">
                 @auth
-                    <a href="{{ url('/dashboard') }}">Dashboard</a>
+                    <a href="{{ route('dashboard') }}" class="register-btn">Dashboard</a>
                 @else
                     <a href="{{ route('login') }}" class="login-btn">Login</a>
                 @if (Route::has('register'))
@@ -53,25 +53,25 @@
         <div class="pricing-card">
             <h3>Langganan 1 bulan (30 hari)</h3>
             <div class="price">Rp 500.00</div>
-            <button class="pilih-paket">Pilih paket</button>
+            <a href="{{ route('login') }}" class="pilih-paket">Pilih paket</a>
         </div>
 
         <div class="pricing-card">
             <h3>Langganan 3 bulan (90 hari)</h3>
             <div class="price">Rp 1.300.000</div>
-            <button class="pilih-paket">Pilih paket</button>
+            <a href="{{ route('login') }}" class="pilih-paket">Pilih paket</a>
         </div>
 
         <div class="pricing-card">
             <h3>Langganan 6 bulan (180 hari)</h3>
             <div class="price">Rp 2.400.000</div>
-            <button class="pilih-paket">Pilih paket</button>
+            <a href="{{ route('login') }}" class="pilih-paket">Pilih paket</a>
         </div>
 
         <div class="pricing-card">
             <h3>Langganan 1 tahun (365 hari)</h3>
             <div class="price">Rp 4.600.000</div>
-            <button class="pilih-paket">Pilih paket</button>
+            <a href="{{ route('login') }}" class="pilih-paket">Pilih paket</a>
         </div>
     </div>
 
@@ -134,7 +134,7 @@
 
     <div class="trial-section">
         <p>Masih belum yakin untuk berlangganan? Silakan coba gratis selama 15 hari dan akses semua kelas di Dicoding Academy</p>
-        <button class="coba-sekarang">Coba sekarang</button>
+        <a href="{{ route('login') }}" class="coba-sekarang">Coba sekarang</a>
     </div>
 </div>
 
@@ -152,10 +152,10 @@
                     Medan Baru, Kota Medan, Sumatera Utara 20222
                 </p>
                 <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="instagram.com" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="youtube.com" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="x.com" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="facebook.com" class="social-link"><i class="fab fa-facebook"></i></a>
                 </div>
             </div>
 
@@ -166,15 +166,15 @@
                     <p>Pasti Ada Langkah Untuk Kerja</p>
                 </div>
                 <ul class="footer-links">
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="/">About Us</a></li>
                 </ul>
             </div>
 
             <!-- Right Links -->
             <div class="footer-right">
                 <ul class="footer-links">
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="whatsapp://send">Contact Us</a></li>
+                    <li><a href="whatsapp://send">FAQ</a></li>
                 </ul>
             </div>
 

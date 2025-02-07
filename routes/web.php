@@ -10,9 +10,11 @@ Route::get('/', function () {
 Route::get('/learningpath', function () {
     return view('learningpath');
 });
+
 Route::get('/program', function () {
     return view('program');
 });
+
 Route::get('/langganan', function () {
     return view('langganan');
 });

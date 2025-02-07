@@ -56,6 +56,7 @@ body {
     cursor: pointer;
     font-family: 'Plus Jakarta Sans', Arial, sans-serif;
     font-size: 14px;
+    text-decoration: none;
 }
 
 .register-btn {
@@ -67,6 +68,7 @@ body {
     cursor: pointer;
     font-family: 'Plus Jakarta Sans', Arial, sans-serif;
     font-size: 14px;
+    text-decoration: none;
 }
 
 .footer {
@@ -455,6 +457,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    text-decoration: none;
 }
 
 .cta-button:hover {

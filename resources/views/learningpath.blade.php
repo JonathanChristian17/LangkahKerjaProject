@@ -5,6 +5,7 @@
     <title>Learning Path</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="{{asset('css/learningpath.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -21,7 +22,7 @@
     @if (Route::has('login'))
             <div class="auth-buttons">
                 @auth
-                    <a href="{{ url('/dashboard') }}">Dashboard</a>
+                    <a href="{{ route('dashboard') }}" class="register-btn">Dashboard</a>
                 @else
                     <a href="{{ route('login') }}" class="login-btn">Login</a>
                 @if (Route::has('register'))
@@ -221,7 +222,7 @@
         <img src="{{asset('images/ava1.png')}}" alt="Developer 5" class="avatar">
         <img src="{{asset('images/ava2.png')}}" alt="Developer 6" class="avatar">
     </div>
-    <button class="cta-button">Mulai belajar</button>
+    <a href="{{ route('login') }}" class="cta-button">Mulai belajar</a>
 </div>
 
 
@@ -239,10 +240,10 @@
                     Medan Baru, Kota Medan, Sumatera Utara 20222
                 </p>
                 <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="instagram.com" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="youtube.com" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="x.com" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="facebook.com" class="social-link"><i class="fab fa-facebook"></i></a>
                 </div>
             </div>
 
@@ -253,15 +254,15 @@
                     <p>Pasti Ada Langkah Untuk Kerja</p>
                 </div>
                 <ul class="footer-links">
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="/">About Us</a></li>
                 </ul>
             </div>
 
             <!-- Right Links -->
             <div class="footer-right">
                 <ul class="footer-links">
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="whatsapp://send">Contact Us</a></li>
+                    <li><a href="whatsapp://send">FAQ</a></li>
                 </ul>
             </div>
 

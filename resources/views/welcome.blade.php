@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link href="{{asset('css/dashboard.css')}}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
     <body>
         <!-- navbar -->
@@ -25,7 +26,7 @@
             @if (Route::has('login'))
             <div class="auth-buttons">
                 @auth
-                    <a href="{{ url('/dashboard') }}">Dashboard</a>
+                <a href="{{ route('dashboard') }}" class="register-btn">Dashboard</a>
                 @else
                     <a href="{{ route('login') }}" class="login-btn">Login</a>
                 @if (Route::has('register'))
@@ -41,7 +42,7 @@
             <div class="header-left">
                 <h1>Improve Your Skills and Build Your Career With <span>Langkah Kerja</span></h1>
                 <p>Enhance your skills and take your career to the next level with Job Step. Find tailored resources, practical guidance, and expert insights to help you thrive as a professional in an ever-evolving digital world.</p>
-                <a href="#" class="join-button">Join for free</a>
+                <a href="{{ route('login') }}" class="join-button">Join for free</a>
             </div>
             <div class="header-right">
                 <img src="{{asset('images/header-bg.png')}}" alt="Student">
@@ -69,11 +70,11 @@
             <div class="role-cards">
                 <div class="role-card instructor">
                     <h3>FOR INSTRUCTOR</h3>
-                    <button class="role-btn">Start a Class Today</button>
+                    <a href="{{ route('login') }}" class="role-btn">Start a Class Today</a>
                 </div>
                 <div class="role-card student">
                     <h3>FOR STUDENTS</h3>
-                    <button class="role-btn">Enter access code</button>
+                    <a href="{{ route('login') }}" class="role-btn">Enter access code</a>
                 </div>
             </div>
         </div>
@@ -83,7 +84,7 @@
             <div class="classroom-content">
                 <h2>Everything you can do in a physical classroom, <span>you can do with Langkah Kerja</span></h2>
                 <p>With <strong>Langkah Kerja</strong>, the boundaries of the traditional classroom are gone. From interactive learning and skill development to real-time progress tracking and career development, everything you can achieve in a physical classroom is now accessible anytime, anywhere. Experience the perfect blend of education and technology designed to empower your journey in the IT world!</p>
-                <a href="#" class="learn-more">Learn more</a>
+                <a href="{{ route('login') }}" class="learn-more">Learn more</a>
             </div>
             <div class="classroom-image">
                 <img src="{{asset('images/Group-17.png')}}" alt="Classroom Experience">
@@ -347,7 +348,7 @@
                 </div>
             </div>
             <div style="text-align: center; margin-top: 2rem;">
-                <button class="get-points-btn">See more features</button>
+                <a href="{{ route('login') }}" class="get-points-btn">See more features</a>
             </div>
         </div>
     </section>
@@ -360,7 +361,7 @@
                     <p>Langkah Kerja has got more than 100k positive ratings from our users around the world.</p>
                     <p>Some of the students and teachers were greatly helped by the Langkah Kerja.</p>
                     <p>Are you too? Please give your assessment</p>
-                    <a href="#" class="write-review-btn">Write your assessment <span>→</span></a>
+                    <a href="{{ route('login') }}" class="write-review-btn">Write your assessment <span>→</span></a>
                 </div>
                 <div class="testimonial-cards">
                     <div class="testimonial-card active">
@@ -406,7 +407,7 @@
                     <div class="news-text">
                         <h4>Revolutionizing Education: Virtual Classes Redefining Learning Landscape</h4>
                         <p>As virtual classes become the new norm, this article explores their impact on traditional education models,</p>
-                        <a href="#" class="read-more">Read more</a>
+                        <a href="{{ route('login') }}" class="read-more">Read more</a>
                     </div>
                 </div>
     
@@ -462,10 +463,10 @@
                         Medan Baru, Kota Medan, Sumatera Utara 20222
                     </p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="instagram.com" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="youtube.com" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="x.com" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="facebook.com" class="social-link"><i class="fab fa-facebook"></i></a>
                     </div>
                 </div>
     
@@ -476,15 +477,15 @@
                         <p>Pasti Ada Langkah Untuk Kerja</p>
                     </div>
                     <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="/">About Us</a></li>
                     </ul>
                 </div>
     
                 <!-- Right Links -->
                 <div class="footer-right">
                     <ul class="footer-links">
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="whatsapp://send">Contact Us</a></li>
+                        <li><a href="whatsapp://send">FAQ</a></li>
                     </ul>
                 </div>
     
@@ -506,32 +507,3 @@
     
     </body>
 </html>
-
-{{-- @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
-                                @auth
-                                    <a
-                                        href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Dashboard
-                                    </a>
-                                @else
-                                    <a
-                                        href="{{ route('login') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Log in
-                                    </a>
-
-                                    @if (Route::has('register'))
-                                        <a
-                                            href="{{ route('register') }}"
-                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                        >
-                                            Register
-                                        </a>
-                                    @endif
-                                @endauth
-                            </nav>
-@endif --}}

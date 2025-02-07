@@ -53,6 +53,7 @@
     cursor: pointer;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 14px;
+    text-decoration: none;
 }
 
 .register-btn {
@@ -64,6 +65,7 @@
     cursor: pointer;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 14px;
+    text-decoration: none;
 }
 
 .footer {
@@ -330,6 +332,7 @@
     padding: 8px 20px;
     border-radius: 4px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .features-grid {
@@ -394,6 +397,7 @@
 }
 
 .coba-sekarang {
+    display: block;
     background: #2C5CC5;
     color: white;
     border: none;
@@ -402,6 +406,7 @@
     cursor: pointer;
     font-weight: 500;
     margin-top: 16px;
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
