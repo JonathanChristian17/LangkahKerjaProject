@@ -7,6 +7,7 @@
         <title>LangkahKerja</title>
 
         <!-- Fonts -->
+        <link rel="icon" href="{{ asset('images/logo.png') }}">
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link href="{{asset('css/dashboard.css')}}" rel="stylesheet">
