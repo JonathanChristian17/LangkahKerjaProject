@@ -28,49 +28,55 @@
               <div class="actual-form">
                 <div class="input-wrap">
                   <input
+                    id="email"
                     type="email"
                     minlength="4"
                     class="input-field"
-                    autocomplete="off"
+                    name="email" 
+                    :value="old('email')"
+                    autocomplete="username"
                     required
                   />
-                  <label>Email</label>
+                  <label for="email" :value="__('Email')">Email</label>
                 </div>
 
                 <div class="input-wrap">
                   <input
+                    id="password"
                     type="password"
                     minlength="4"
                     class="input-field"
-                    autocomplete="off"
+                    name="password"
+                    autocomplete="current-password"
                     required
                   />
-                  <label>Password</label>
+                  <label for="password" :value="__('Password')">Password</label>
                 </div>
 
-                <input type="submit" value="Sign In" class="sign-btn" />
+                <input type="submit" value="{{ __('Log in') }}" class="sign-btn" />
                 <div class="separator">
                   <span>or</span>
                 </div>
                 <div class="login-options">
                   <button class="login-btn google-login">
-                    <img src="./img/google-logo.png" alt="Google Login" />
-                  </button>
-                  <button class="login-btn github-login">
-                    <img src="./img/github-logo.png" alt="GitHub Login" />
+                    <img src="{{asset('img/google-logo.png')}}" alt="Google Login" />
                   </button>
                 </div>
 
                 <p class="text">
-                  Forgotten your password or you login datails?
-                  <a href="#">Get help</a> signing in
+                  @if (Route::has('password.request'))
+                  Forgotten your password or you login details?
+                  <a href="{{ route('password.request') }}">{{ __('Forgot your password?') }}</a> 
+                  signing in
+                  @endif
                 </p>
               </div>
             </form>
 
-            <form action="index.html" autocomplete="off" class="sign-up-form">
+            <form method="POST" action="{{ route('register') }}" autocomplete="off" class="sign-up-form">
+              @csrf
               <div class="logo">
-                <img src="./img/logo.png" alt="Langkah Kerja" />
+                <img src="{{asset('img/logo.png')}}" alt="Langkah Kerja" />
                 <h4>Langkah Kerja</h4>
               </div>
 
@@ -83,53 +89,74 @@
               <div class="actual-form">
                 <div class="input-wrap">
                   <input
+                    id="name"
                     type="text"
+                    name="name" 
+                    :value="old('name')"
                     minlength="4"
                     class="input-field"
-                    autocomplete="off"
+                    autocomplete="name"
                     required
                   />
-                  <label>Name</label>
+                  <label for="name" :value="__('Name')">Name</label>
                 </div>
 
                 <div class="input-wrap">
                   <input
+                    id="email"
                     type="email"
+                    name="email" 
+                    :value="old('email')"
                     class="input-field"
-                    autocomplete="off"
+                    autocomplete="username"
                     required
                   />
-                  <label>Email</label>
+                  <label for="email" :value="__('Email')">Email</label>
                 </div>
 
                 <div class="input-wrap">
                   <input
-                    type="phone-number"
+                    id="phone_number"
+                    type="text"
+                    name="phone_number" 
+                    :value="old('phone_number')"
                     class="input-field"
-                    autocomplete="off"
+                    autocomplete="phone_number"
                     required
                   />
-                  <label>phone-number</label>
+                  <label for="phone_number" :value="__('phone_number')">Phone Number</label>
                 </div>
 
                 <div class="input-wrap">
                   <input
+                    id="password"
+                    type="password"
+                    name="password"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="new-password"
+                    required
+                  />
+                  <label for="password" :value="__('Password')">Password</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    id="password_confirmation"
                     type="password"
                     minlength="4"
                     class="input-field"
-                    autocomplete="off"
+                    name="password_confirmation"
+                    autocomplete="new-password"
                     required
                   />
-                  <label>Password</label>
+                  <label for="password_confirmation" :value="__('Confirm Password')">Password Confirmation</label>
                 </div>
 
-                <input type="submit" value="Sign Up" class="sign-btn" />
+                <input type="submit" value="{{ __('Register') }}" class="sign-btn" />
                 <div class="login-options">
                   <button class="login-btn google-login">
-                    <img src="./img/google-logo.png" alt="Google Login" />
-                  </button>
-                  <button class="login-btn github-login">
-                    <img src="./img/github-logo.png" alt="GitHub Login" />
+                    <img src="{{asset('img/google-logo.png')}}" alt="Google Login" />
                   </button>
                 </div>
 
@@ -145,9 +172,9 @@
 
           <div class="carousel">
             <div class="images-wrapper">
-              <img src="./img/image1.png" class="image img-1 show" alt="" />
-              <img src="./img/image2.png" class="image img-2" alt="" />
-              <img src="./img/image3.png" class="image img-3" alt="" />
+              <img src="{{asset('img/image1.png')}}" class="image img-1 show" alt="" />
+              <img src="{{asset('img/image2.png')}}" class="image img-2" alt="" />
+              <img src="{{asset('img/image3.png')}}" class="image img-3" alt="" />
             </div>
 
             <div class="text-slider">
@@ -172,6 +199,6 @@
 
     <!-- Javascript file -->
 
-    <script src="js/app.js"></script>
+    <script src="{{asset('js/app.js')}}"></script>
   </body>
 </html>

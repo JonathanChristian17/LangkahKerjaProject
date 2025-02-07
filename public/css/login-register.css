@@ -28,7 +28,7 @@ main {
   position: relative;
   width: 100%;
   max-width: 1020px;
-  height: 640px;
+  height: 720px;
   background-color: rgba(255, 255, 255, 0.5); /* Warna putih dengan transparansi 50% */
   border-radius: 3.3rem;
   box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
