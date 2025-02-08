@@ -36,10 +36,10 @@ Route::get('/auth/check', 'HomeController@checkAuth');
 
 Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 Route::get('category/{category}/courses', [HomeController::class, 'courses_by_category'])->name('courses_by_category');
-Route::get('courses/{course}', 'HomeController@course_detail')->name('course_detail');
+Route::get('courses/{course}', [HomeController::class, 'course_detail'])->name('course_detail');
 
 // cart
-Route::get('my-carts', 'CartController@carts')->name('carts.all');
+Route::get('my-carts', [CartController::class, 'carts'])->name('carts.all');
 Route::post('cart/add', 'CartController@add')->name('cart.add');
 Route::post('cart/remove/{id}', 'CartController@remove')->name('cart.remove');
 
